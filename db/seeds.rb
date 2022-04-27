@@ -38,8 +38,8 @@ loop_n.to_i.times do
     name: "#{Faker::Address.community} in #{Faker::Address.city}",
     address: Faker::Address.full_address,
     description: Faker::GreekPhilosophers.quote,
-    price_per_night: Faker::Commerce.price,
-    number_of_guests: Faker::Number.within(range: 30..120)
+    price_per_night: Faker::Number.within(range: 30..120),
+    number_of_guests: Faker::Number.within(range: 2..10)
   )
   flat.save!
 end
