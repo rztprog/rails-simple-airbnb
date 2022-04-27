@@ -1,1 +1,47 @@
-<h1>Show</h1>
+<%= image_tag "https://source.unsplash.com/1280x720/?house", class: "flat-image" %>
+
+<div class="show-container d-flex">
+  <div class="show-container-left">
+    <div class="title">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="description">
+      <h2>A bit more about this flat..</h2>
+      <p><%= @flat.description %></p>
+    </div>
+    <div class="details">
+      <h3>Details</h3>
+      <p ><i class="fas fa-euro-sign">  <%= @flat.price_per_night %>  </i> (for each)</p>
+      <p ><i class="fas fa-users">  <%= @flat.number_of_guests %> </i> (number max)</p>
+    </div>
+  </div>
+  <div class="show-container-right">
+    <div class="booking">
+      <h4>Book this place !</h4>
+      <form action="">
+        <span class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">From</span>
+          <input type="text" class="form-control" placeholder="02/05/2022" aria-label="from" aria-describedby="basic-addon1">
+        </span>
+        <span class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">To</span>
+          <input type="text" class="form-control" placeholder="12/05/2022" aria-label="to" aria-describedby="basic-addon1">
+        </span>
+        <span>
+          <button class="btn btn-primary w-100" type="submit">Book !</button>
+        </span>
+      </form>
+    </div>
+    <div class="share-links">
+      <h4>Share</h4>
+      <span>
+        <i class="fab fa-twitter-square"></i>
+        <i class="fab fa-facebook-square"></i>
+      </span>
+      <div>
+        <%= lt %
+      </div>
+    </div>
+  </div>
+</div>

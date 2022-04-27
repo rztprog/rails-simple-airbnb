@@ -1,23 +1,24 @@
-<h1>All our flats (<%= @flats.count %>)</h1>
-
-<div class="d-flex">
-  <% @flats.each do |flat| %>
-    <div class="card" style="width: 18rem;">
-      <%# <img src="https://source.unsplash.com/1280x720/?house" class="card-img-top" alt="house"> %>
-      <div class="card-body">
-        <h5 class="card-title"><%= flat.name %></h5>
-        <p class="card-text"><%= flat.address %></p>
+<div class="container">
+  <h1>All our flats (<%= @flats.count %>)</h1>
+  <div class="d-flex">
+    <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <%# <img src="https://source.unsplash.com/1280x720/?house" class="card-img-top" alt="house"> %>
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.address %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><i class="fas fa-euro-sign">  <%= flat.price_per_night %>  </i></li>
+          <li class="list-group-item"><i class="fas fa-users">  <%= flat.number_of_guests %>  </i> </li>
+        </ul>
+        <div class="card-body">
+          <%= link_to "More info", flat_path(flat), class: "navbar-link" %>
+          <%# 
+          link_to "Edit", root_path, class: "navbar-link"
+          link_to "Remove", root_path, class: "navbar-link" %>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item"><i class="fas fa-euro-sign">  <%= flat.price_per_night %>  </i></li>
-        <li class="list-group-item"><i class="fas fa-users">  <%= flat.number_of_guests %>  </i> </li>
-      </ul>
-      <div class="card-body">
-        <%= link_to "More info", root_path, class: "navbar-link" %>
-        <%# 
-        link_to "Edit", root_path, class: "navbar-link"
-        link_to "Remove", root_path, class: "navbar-link" %>
-      </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
