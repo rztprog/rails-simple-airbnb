@@ -39,7 +39,7 @@ loop_n.to_i.times do
     address: Faker::Address.full_address,
     description: Faker::GreekPhilosophers.quote,
     price_per_night: Faker::Commerce.price,
-    number_of_guests: Faker::Number.within(range: 1..12)
+    number_of_guests: Faker::Number.within(range: 30..120)
   )
   flat.save!
 end
