@@ -39,9 +39,14 @@
         <i class="fab fa-twitter-square"></i>
         <i class="fab fa-facebook-square"></i>
       </span>
-      <div>
-        <%= lt %
-      </div>
     </div>
+    <span class="d-flex">
+      <%= link_to root_path, class: "btn btn-secondary w-50" do %>
+        <i class="fas fa-undo-alt"></i> Back to flats
+      <% end %>
+      <%= link_to edit_flat_path, class: "btn btn-warning w-50" do %>
+        <i class="far fa-edit"></i> Edit
+      <% end %>
+    </span>
   </div>
 </div>
