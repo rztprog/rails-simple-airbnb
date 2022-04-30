@@ -14,9 +14,14 @@
         </ul>
         <div class="card-body">
           <%= link_to "More info", flat_path(flat), class: "navbar-link" %>
-          <%# 
-          link_to "Edit", root_path, class: "navbar-link"
-          link_to "Remove", root_path, class: "navbar-link" %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "navbar-link" %>
+          <%# link_to "Remove", root_path, class: "navbar-link" %>
+
+          <%= link_to flat_path(flat), class: "navbar-link", 
+            method: :delete,
+            data: { confirm: "Are you sure you want to delete this flat?" } do %>
+           Delete
+          <% end %>
         </div>
       </div>
     <% end %>
