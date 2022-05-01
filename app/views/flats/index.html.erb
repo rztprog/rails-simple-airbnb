@@ -1,8 +1,8 @@
 <div class="container">
   <h1>All our flats (<%= @flats.count %>)</h1>
-  <div class="d-flex">
+  <div class="row">
     <% @flats.each do |flat| %>
-      <div class="card" style="width: 18rem;">
+      <div class="card col-lg-4 col-md-12" style="width: 18rem;">
         <img src="<%= flat.picture %>" class="card-img-top" alt="house">
         <div class="card-body">
           <h5 class="card-title"><%= flat.name %></h5>
