@@ -8,6 +8,6 @@ class UnsplashScraperService
     html_file = URI.open(url)
     doc_file = Nokogiri::HTML(html_file)
 
-    puts doc_file.search(".mItv1")
+    puts doc_file.search(".mItv1").search("img").attr('src')
   end
 end

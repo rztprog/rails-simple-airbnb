@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "faker"
-require_relative "unsplash_scraper_service"
+require_relative "../config/initializers/unsplash_scraper_service"
 
 # Welcomer
 puts "

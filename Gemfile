@@ -60,3 +60,6 @@ gem 'faker'
 
 # Simple form
 gem 'simple_form'
+
+# Unsplash
+# gem 'unsplash'
