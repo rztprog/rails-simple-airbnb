@@ -34,15 +34,16 @@ loop_n = STDIN.gets.chomp
 
 # Create fake Flat
 puts "Creating #{loop_n} fake Flat(s), please wait..."
+
 loop_n.to_i.times do
   flat = Flat.new(
     name: "#{Faker::Address.community} in #{Faker::Address.city}",
     address: Faker::Address.full_address,
     description: Faker::GreekPhilosophers.quote,
     price_per_night: Faker::Number.within(range: 30..120),
-    number_of_guests: Faker::Number.within(range: 2..10)
+    number_of_guests: Faker::Number.within(range: 2..10),
+    picture: UnsplashScraperService.new.call
   )
-  flat.picture = UnsplashScraperService.new.call
   flat.save!
 end
 
