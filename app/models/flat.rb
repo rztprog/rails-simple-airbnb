@@ -7,7 +7,7 @@ class Flat < ApplicationRecord
   validates :price_per_night, numericality: { 
     only_integer: true, 
     greater_than_or_equal_to: price_per_night_min, 
-    message: "should be a price greather than #{price_per_night_min}" 
+    message: "should be a price greather than #{price_per_night_min}€" 
   }
   validates :number_of_guests, numericality: { 
     only_integer: true, 

@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require "faker"
+require_relative "unsplash_scraper_service"
 
 # Welcomer
 puts "
@@ -41,6 +42,7 @@ loop_n.to_i.times do
     price_per_night: Faker::Number.within(range: 30..120),
     number_of_guests: Faker::Number.within(range: 2..10)
   )
+  flat.picture = UnsplashScraperService.new.call
   flat.save!
 end
 
