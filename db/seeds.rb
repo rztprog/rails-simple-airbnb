@@ -33,7 +33,8 @@ puts "> "
 loop_n = STDIN.gets.chomp
 
 # Create fake Flat
-puts "Creating #{loop_n} fake Flat(s), please wait..."
+puts "Creating #{loop_n} fake Flat(s),"
+puts "please wait..."
 
 loop_n.to_i.times do
   flat = Flat.new(
