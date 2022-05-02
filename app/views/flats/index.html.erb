@@ -4,7 +4,9 @@
     <% @flats.each do |flat| %>
       <div class="card">
         <figure>
-          <img src="<%= flat.picture %>" class="card-img-top" alt="house">
+        <%= link_to flat_path(flat) do %>
+          <%= image_tag flat.picture, class: "card-img-top" %>
+        <% end %>
         </figure>
         <div class="card-body flat-body">
           <h5 class="card-title"><%= flat.name %></h5>
