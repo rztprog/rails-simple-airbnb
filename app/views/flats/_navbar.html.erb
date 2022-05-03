@@ -13,8 +13,9 @@
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control me-2" type="search" placeholder="Pine court" aria-label="Search" name="search" value="<%= params[:search] if params[:search] %>">
         <button class="btn btn-outline-success" type="submit">Search</button>
+        <%= link_to "Reset", root_path, class: "btn btn-secondary my-2 my-sm-0 ms-2" %>
       </form>
     </div>
   </div>

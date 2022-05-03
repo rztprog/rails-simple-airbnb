@@ -1,5 +1,10 @@
 <div class="container">
-  <h1>All our flats (<%= @flats.count %>)</h1>
+  <% if params[:search]  %>
+    <h1>All our flats (<%= @flats.count %>)</h1>
+    <p>You search for <b><%= params[:search] %></b>. We found <%= @flats.count %> flats out of our <%= @flats_all.count %> on our website.</p>
+  <% else %>
+    <h1>All our flats (<%= @flats.count %>)</h1>
+  <% end %>
   <div class="grid">
     <% @flats.each do |flat| %>
       <div class="card">
