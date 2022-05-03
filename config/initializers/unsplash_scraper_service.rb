@@ -16,6 +16,6 @@ class UnsplashScraperService
       pictures << element.attr('src')
     end
 
-    pictures[rand(0..pictures.length-1)]
+    pictures[rand(1..pictures.length-1)]
   end
 end
